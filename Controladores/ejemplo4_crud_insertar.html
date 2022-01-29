@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style>
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="insertDatesCrtl">
+
+        <div class="containerFormEnterDates">
+
+            <form name="myForm">
+
+                <p>Name: <input type="text" ng-model="name" required> </p>
+                <p>Email: <input type="email" ng-model="mail" required> </p>
+                <p>Addres: <input type="text" ng-model="address" required> </p> <br>
+
+                <button id="btnEnviar">Enviar</button>
+
+            </form>
+
+        </div>
+
+        <div class="containerFormSetDates">
+
+            <table>
+                <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Addres</th>
+                </tr>
+            </thead>
+
+                <tbody id="tbody"> </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="ejemplo4.js"></script>
+
+</body>
+
+</html>

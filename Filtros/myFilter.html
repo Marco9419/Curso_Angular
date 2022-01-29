@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+    <ul ng-app="myApp" ng-controller="myCtrl">
+        <li ng-repeat="x in names">
+            {{x | myFilter }}
+        </li>
+    </ul>
+
+    <script>
+        var app = angular.module("myApp", []).filter("myFilter", () => {
+            return (x) => {
+                var i, c, txt = "";
+
+                for (i = 0; i < x.length; i++) {
+                    c = x[i];
+
+                    if (i % 2 == 0) {
+                        c = c.toUpperCase();
+                    }
+                    txt += c;
+                }
+                return txt;
+            }
+        });
+
+        app.controller("myCtrl", ($scope) => {
+            $scope.names = [
+                'Jani',
+                'Carl',
+                'Margareth',
+                'Hege',
+                'Joe',
+                'Gustav',
+                'Birgit',
+                'Mary',
+                'Kai'
+            ]
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>This header changes after two seconds: </p>
+        <p> {{messagge}} </p>
+    </div>
+
+    <script>
+        var app=angular.module("myApp",[]).controller("myCtrl", ($scope, $timeout)=>{
+            $scope.messagge = "Hello World";
+            $timeout(()=>{
+                $scope.messagge = "This text are been changes"
+            }, 2000);
+        })
+    </script>
+    
+</body>
+</html> 

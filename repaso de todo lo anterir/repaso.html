@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <p>My name is : {{firstName}} </p>
+
+        <p>Ingresa tu telefono : <input type="number" ng-model="number"> </p>
+        <p>{{number}}</p>
+
+        <p>Ingrese su nombre: <input type="text" ng-model="enterName"> </p>
+        <p id="personName"></p>
+
+        <button id=btn>Enviar</button>
+
+
+        <script>
+            var firstName = ['Marco', 'Juan', 'Sonia', 'Angye']
+            var app = angular.module('myApp', []);
+
+            app.controller('myCtrl', ($scope) => {
+
+                var btn = document.querySelector("#btn");
+
+                btn.addEventListener("click", () => {
+
+                    for (let name of firstName) {
+
+                        if (name == $scope.enterName) {
+
+                            var personName = document.querySelector("#personName");
+                            personName.innerText = $scope.enterName;
+
+                        }
+
+                    }
+
+                })
+
+            })
+        </script>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
