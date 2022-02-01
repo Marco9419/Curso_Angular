@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="">
+
+    <form>
+        <h3>Select a radioButton</h3>
+        <input type="radio" ng-model="myValue" value="dogs">Dogs
+        <input type="radio" ng-model="myValue" value="cats">Cats
+        <input type="radio" ng-model="myValue" value="birds">Birds
+    </form>
+
+    <div ng-switch="myValue">
+
+        <div ng-switch-when="dogs">
+            <h2>Dogs</h2>
+            <p>Welcome to a world of dogs</p>
+        </div>
+
+        <div ng-switch-when="cats">
+            <h3>Cats</h3>
+            <p>Welcome to a world of cats</p>
+        </div>
+
+        <div ng-switch-when="birds">
+            <h3>Birds</h3>
+            <p>Welcome to a world of birds</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
