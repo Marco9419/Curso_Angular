@@ -1,0 +1,13 @@
+.imageCard2{
+    width: 200px;
+    height: 200px;
+}
+
+.titleCard2{
+    text-align:center;
+}
+
+.subtitleCard2{
+    font-weight: 600;
+    margin-left: 5px;
+}

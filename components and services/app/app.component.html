@@ -1,0 +1,16 @@
+<app-header></app-header>
+
+<div class="containerIamges">
+
+
+<div class="grid"> 
+<app-car  [dataEntrante]="detalleVideo" 
+          *ngFor="let detalleVideo of listaVideos"></app-car>
+
+</div> 
+
+</div>
+
+<!-- *********************Lista de favoritos ******************** -->
+<app-sidebar></app-sidebar>
+

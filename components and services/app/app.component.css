@@ -1,0 +1,18 @@
+app-car{
+    display: inline-block;
+    margin: 5px;
+}
+
+app-card2{
+    display:inline-block;
+    margin: 5px;
+}
+
+.containerIamges{
+    width: 100%;
+}
+
+.grid{
+    width: 100%;
+    display: inline-block
+}
